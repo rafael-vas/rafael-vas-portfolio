@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url(../fonts/SFPRODISPLAYREGULAR.OTF) format("opentype"),
+    url(../fonts/SFPRODISPLAYMEDIUM.OTF) format("opentype"),
+    url(../fonts/SFPRODISPLAYBOLD.OTF) format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "SF Pro Display";
+}
+
+:root {
+  --bg-primary: #101c30;
+  --bg-secondary: #fff;
+  --color-primary: #fff;
+  --color-secondary: #101c30;
+
+  --yellow-700: rgb(143, 135, 55);
+  --yellow-400: rgb(244, 230, 79);
+  --yellow-100: rgb(242, 234, 144);
+}
+
+body {
+  background-color: var(--bg-primary);
+  /* overflow: hidden; */
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-primary);
+  animation: fade-in 1s ease-in-out;
+}
+
+.app::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/pattern.svg");
+  background-position: center;
+  opacity: 0.17;
+  animation: move 5s linear infinite;
+  z-index: -1;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+.app > header,
+.app > main,
+.app > section,
+.app > footer {
+  padding: 0.5rem 8.75rem;
+}
+
+@media screen and (max-width: 712px) {
+  html {
+    font-size: 82.75%;
+  }
+
+  .app > header,
+  .app > main,
+  .app > section,
+  .app > footer {
+    padding: 0.5rem 2.75rem;
+  }
+}
+
+.app > section.active {
+  position: absolute;
+  margin-top: 4rem;
+  inset: 0;
+  animation: fade-in 0.4s ease-in-out;
+}
+
+.app > section.hidden {
+  visibility: hidden;
+  max-height: 0;
+  max-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translate(-5px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    transform: translate(-1rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
