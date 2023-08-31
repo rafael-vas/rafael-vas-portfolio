@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+}
+
+.header .info-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .15rem;
+}
+
+.header .info-link .name {
+    letter-spacing: .05rem;
+    transition: color .08s ease-in-out;
+    font-size: .945rem;
+    text-shadow: 0 0 .3rem #ffffff72;
+}
+
+.header .info-link .role {
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-size: .6rem;
+}
+
+.header .info-link .name:hover {
+    color: var(--yellow-400);
+    text-shadow: 0 0 .3rem var(--yellow-700);
+}
