@@ -2,6 +2,7 @@ import './styles.css'
 
 import { Header } from "../components/Header"
 import { Navbar } from '../components/Navbar'
+import { Hero } from '../components/HeroSection'
 
 
 export function App() {
@@ -10,6 +11,7 @@ export function App() {
     <div className='app'>
       <Header />
       <Navbar />
+      <Hero />
 
     </div>
   )

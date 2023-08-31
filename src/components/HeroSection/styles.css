@@ -1,0 +1,108 @@
+.hero {
+    height: calc(100vh - 65px);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    height: 100%;
+    /* background-position: bottom; */
+    /* background-repeat: no-repeat; */
+}
+
+.hero .avatar {
+    /* width: 130px; */
+    width: 9rem;
+    animation: bounce 7s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-6px) rotate(-4deg) scale(.98);
+        opacity: 0.3;
+    }
+
+    20% {
+        transform: translate(6px) rotate(4deg) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-6px) rotate(-4deg) scale(.98);
+        opacity: 0.3;
+    }
+}
+
+.hero .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 5rem;
+}
+
+.hero .title, .hero .text {
+    /* text-transform: capitalize; */
+    text-align: center;
+}
+
+.hero .title {
+    font-size: 2.9rem;
+    letter-spacing: .1rem;
+}
+
+.hero .title span {
+    /* color: rgb(232, 214, 11); */
+    /* text-shadow: 0 0 .65rem rgba(229, 211, 15, .55); */
+    color: var(--yellow-400);
+    text-shadow: 0 0 .65rem var(--yellow-700);
+}
+
+.hero .text {
+    font-size: 1.15rem;
+    letter-spacing: .15rem;
+    line-height: 1.6rem;
+    margin-top: .2rem;
+    max-width: 40rem;
+    text-shadow: 0 0 2rem #ffffff3f;
+    opacity: .9;
+}
+
+.hero .btn {
+    font-size: .875rem;
+    margin-top: 2rem;
+    padding: .6rem 2.6rem;
+    background-color: var(--yellow-400);
+    color: var(--color-secondary);
+    border: 2px solid #ffffff0e;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 .8rem var(--yellow-700);
+    transition: all .3s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    line-height: 20px;
+}
+
+.hero .btn:hover {
+    background-color: #1a3769;
+    box-shadow: 0 0 .8rem #2d61bc83;
+    color: #fff;
+    transform: translate(3px) scale(1.01) rotate(1deg);
+}
+
+.hero.hidden .btn {
+    transition: none;
+}
