@@ -42,10 +42,11 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../assets/pattern.svg");
+  background-image: url("../assets/blue-background.jpg");
   background-position: center;
-  opacity: 0.17;
-  animation: move 5s linear infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .425;
   z-index: -1;
 }
 
@@ -86,20 +87,6 @@ a {
   max-width: 0;
   padding: 0;
   margin: 0;
-}
-
-@keyframes move {
-  0% {
-    transform: translate(0);
-  }
-
-  50% {
-    transform: translate(-5px);
-  }
-
-  100% {
-    transform: translate(0);
-  }
 }
 
 @keyframes fade-in {

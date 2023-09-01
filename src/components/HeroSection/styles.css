@@ -97,7 +97,7 @@
 }
 
 .hero .btn:hover {
-    background-color: #1a3769;
+    background-color: #162f6a;
     box-shadow: 0 0 .8rem #2d61bc83;
     color: #fff;
     transform: translate(3px) scale(1.01) rotate(1deg);
