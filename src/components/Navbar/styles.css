@@ -1,6 +1,7 @@
 .navbar {
   /* background-color: rgba(42, 65, 101, 0.45); */
   background-color: #162f6a;
+  background: linear-gradient(to left, #162f6a, transparent);
   border-radius: 20px;
   position: fixed;
   top: 50%;
@@ -12,8 +13,10 @@
   justify-content: center;
   gap: 1rem;
   padding: 1.2rem 0.8rem;
-  box-shadow: 0.1rem 0.2rem 0.7rem #00000020;
+  box-shadow: 0.1rem 0.2rem 0.7rem #00000030;
   z-index: 999;
+
+  /* border-top: .205rem solid var(--yellow-400); */
   /* height: 600px; */
 }
 
@@ -40,7 +43,7 @@
     border-radius: 0px;
     transition: 0;
     /* background-color: rgb(14, 33, 61); */
-    background-color: transparent;
+    background: transparent;
   }
 
   .navbar .nav-link {
