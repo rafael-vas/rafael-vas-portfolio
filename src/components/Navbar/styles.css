@@ -1,7 +1,7 @@
 .navbar {
   /* background-color: rgba(42, 65, 101, 0.45); */
   background-color: #162f6a;
-  background: linear-gradient(to left, #203e86, transparent);
+  background: linear-gradient(to left, #203e86, #203f8628);
   border-radius: 20px;
   position: fixed;
   top: 50%;
