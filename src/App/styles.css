@@ -1,8 +1,16 @@
 @font-face {
   font-family: "SF Pro Display";
-  src: url(../fonts/SFPRODISPLAYREGULAR.OTF) format("opentype"),
-    url(../fonts/SFPRODISPLAYMEDIUM.OTF) format("opentype"),
-    url(../fonts/SFPRODISPLAYBOLD.OTF) format("opentype");
+  src: url("../fonts/SFPRODISPLAYREGULAR.OTF") format("opentype"),
+    url("../fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype"),
+    url("../fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("../fonts/BaiJamjuree-Regular.ttf") format("truetype"),
+  url("../fonts/BaiJamjuree-Medium.ttf") format("truetype"),
+  url("../fonts/BaiJamjuree-SemiBold.ttf") format("truetype"),
+  url("../fonts/BaiJamjuree-Bold.ttf") format("truetype");
 }
 
 * {
@@ -11,7 +19,8 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family: "SF Pro Display";
+  /* font-family: "SF Pro Display"; */
+  font-family: "Bai Jamjuree";
 }
 
 :root {
@@ -20,8 +29,8 @@
   --color-primary: #fff;
   --color-secondary: #101c30;
 
-  --yellow-700: rgb(143, 135, 55);
-  --yellow-400: rgb(244, 230, 79);
+  --yellow-700: rgb(163, 154, 55);
+  --yellow-400: rgb(248, 233, 71);
   --yellow-100: rgb(242, 234, 144);
 }
 

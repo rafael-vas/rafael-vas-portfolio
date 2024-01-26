@@ -27,7 +27,7 @@ export function NavLink({ Icon, text, active = false }) {
          className={`nav-link ${text} ${active ? "active" : ""}`}
          onClick={handleShowClickedSection}
         >
-            {<Icon className="nav-icon" size={32}/>}
+            {<Icon className="nav-icon" size={32} weight="bold"/>}
             <strong className="nav-text">{text}</strong>
         </a>
     )
