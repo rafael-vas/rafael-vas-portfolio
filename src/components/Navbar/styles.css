@@ -72,3 +72,18 @@
     width: 30px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .navbar {
+    gap: .825rem;
+    padding: 1rem .6rem;
+  }
+
+  .navbar .nav-link {
+    padding: .325rem .475rem;
+  }
+
+  .navbar .nav-icon {
+    width: 24px;
+  }
+}
