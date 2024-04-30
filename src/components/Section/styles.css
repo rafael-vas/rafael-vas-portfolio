@@ -46,13 +46,32 @@ section.home .home-inner .article {
     align-items: start;
     gap: 1rem;
     padding-bottom: 5rem;
-    max-width: 44rem;
+    max-width: 50rem;
+    background-color: hsla(0, 0%, 100%, 0.015);
+    padding: 3.225rem 2.575rem;
+    border-radius: 2rem;
+    border-right: .725rem solid var(--yellow-400);
+    border-top-right-radius: 14.225rem;
+    box-shadow: 0 0 2rem rgba(0, 13, 31, .25);
+    margin-bottom: 3.225rem;
+
+    background: linear-gradient(
+        to left, hsla(222, 64%, 35%, .625), hsla(222, 61%, 33%, 0.125)
+    );
 
 
     @media screen and (max-width: 992px) {
         /* align-items: center; */
-        padding-right: 1.25rem;
-        padding-left: 1.25rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        max-width: 44rem;
+        padding-right: 1.425rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
     }
 }
 
@@ -68,18 +87,24 @@ section.home .home-inner .title, .home-inner .text {
 section.home .home-inner .greeting {
     position: relative;
     text-transform: uppercase;
-    letter-spacing: .25rem;
+    letter-spacing: .2rem;
     font-size: 0.875rem;
     font-family: "SF Pro Display";
     margin-bottom: -0.875rem;
+    padding-left: .15rem;
 }
 
 section.home .home-inner .title {
-    font-size: 3.75rem;
+    /* font-size: 3.75rem; */
+    font-size: 4.5rem;
     letter-spacing: .1rem;
 
     @media screen and (max-width: 462px) {
-        font-size: 2.825rem;
+        font-size: 2.875rem;
+    }
+
+    @media screen and (max-width: 335px) {
+        font-size: 2.525rem;
     }
 }
 
@@ -96,6 +121,7 @@ section.home .home-inner .text {
     text-shadow: 0 0 2rem #ffffff3f;
     opacity: .9;
     font-family: "SF Pro Display";
+    padding-left: .15rem;
 }
 
 section.home .home-inner .text span {
@@ -107,9 +133,9 @@ section.home .home-inner .text span {
 }
 
 section.home .home-inner .btn {
-    font-size: .875rem;
+    font-size: .825rem;
     margin-top: 2rem;
-    padding: .6rem 2.6rem;
+    padding: .625rem 1.825rem;
     background-color: var(--yellow-400);
     color: var(--color-secondary);
     border: 2px solid #ffffff0e;
