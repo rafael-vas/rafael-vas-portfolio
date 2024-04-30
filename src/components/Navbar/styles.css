@@ -73,7 +73,22 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 360px) {
+  .navbar {
+    gap: .825rem;
+    padding: 1rem .6rem;
+  }
+
+  .navbar .nav-link {
+    padding: .425rem .675rem;
+  }
+
+  .navbar .nav-icon {
+    width: 24px;
+  }
+}
+
+@media screen and (max-width: 325px) {
   .navbar {
     gap: .825rem;
     padding: 1rem .6rem;
