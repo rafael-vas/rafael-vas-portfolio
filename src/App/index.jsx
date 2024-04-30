@@ -1,5 +1,7 @@
 import "./styles.css";
 
+const cvLink = "https://drive.google.com/file/d/1LoEPMgwWAh4BoRtNWx7ZyBGqlNCBDc_q/view?usp=sharing"
+
 // import avatar from "../assets/avatar.png";
 
 import { DownloadSimple } from "@phosphor-icons/react";
@@ -10,6 +12,7 @@ import { Navbar } from "../components/Navbar";
 import { Section } from "../components/Section";
 
 export function App() {
+
   return (
     <div className="app">
       <Design />
@@ -17,25 +20,27 @@ export function App() {
       <Navbar />
 
       <Section name="home" active>
-        {/* <img className="avatar" src={avatar} alt="A avatar picture of me" /> */}
+        {/* <img className="avatar" src={avatar} alt="An avatar of me" /> */}
         <article className="article">
           <p className="greeting">Hey, there!</p>
           <h1 className="title">
             I&apos;m <span>Rafael Vas</span>.
+            {/* Great to see you! */}
           </h1>
           <p className="text">
-            As a <span>Front-End Developer</span>, I merge design and
+            {/* As a <span>Front-End Developer</span>, I merge design and
             development to create exceptional digital experiences. My focus is
-            on quality work, where web development meets innovation.
+            on quality work, where web development meets innovation. */}
+            I&apos;m a <span>Front-end Developer</span> with years of experience in web development, working with both large and small companies as a freelancer and in teams.
           </p>
           <a
             className="btn"
             target="_blank"
-            href="https://drive.google.com/file/d/1LoEPMgwWAh4BoRtNWx7ZyBGqlNCBDc_q/view?usp=sharing"
+            href={cvLink}
             rel="noreferrer"
           >
             Download CV
-            <DownloadSimple size={20} />
+            <DownloadSimple size={18} />
           </a>
         </article>
       </Section>
