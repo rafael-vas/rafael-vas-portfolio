@@ -40,13 +40,13 @@
     transform: translateX(-50%);
     flex-direction: row;
     gap: 1rem;
-    padding: .875rem .6rem;
+    padding: 1rem .6rem;
     width: 100%;
     border-radius: 0px;
     transition: 0;
-    /* background: rgba(14, 33, 61, 0.225); */
+    /* background: rgba(14, 33, 61, 0.125); */
     background: rgba(9, 18, 39, 0.535);
-    backdrop-filter: blur(.625rem);
+    backdrop-filter: blur(.575rem);
     box-shadow: none;
     /* background: transparent; */
     transition: none;
@@ -79,7 +79,7 @@
 @media screen and (max-width: 360px) {
   .navbar {
     gap: .825rem;
-    padding: .675rem .6rem;
+    padding: .825rem .6rem;
   }
 
   .navbar .nav-link {
