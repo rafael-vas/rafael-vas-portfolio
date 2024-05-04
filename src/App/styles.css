@@ -19,6 +19,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  scroll-behavior: smooth;
   /* font-family: "SF Pro Display"; */
   font-family: "Bai Jamjuree";
 }
@@ -46,6 +47,7 @@ body {
   flex-direction: column;
   color: var(--color-primary);
   animation: fade-in 1s ease-in-out;
+  position: relative;
 }
 
 a {
@@ -72,6 +74,12 @@ a {
   }
 }
 
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 74.75%;
+  }
+}
+
 .app > section.active {
   position: absolute;
   margin-top: 4rem;
@@ -85,6 +93,7 @@ a {
   max-width: 0;
   padding: 0;
   margin: 0;
+  display: none;
 }
 
 @keyframes fade-in {
