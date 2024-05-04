@@ -47,7 +47,7 @@ section.home .home-inner .article {
     gap: 1rem;
     padding-bottom: 5rem;
     max-width: 50rem;
-    background-color: hsla(0, 0%, 100%, 0.015);
+    /* background-color: hsla(0, 0%, 100%, 0.015); */
     padding: 3.225rem 2.575rem;
     border-radius: 2rem;
     border-right: .725rem solid var(--yellow-400);
@@ -56,7 +56,7 @@ section.home .home-inner .article {
     margin-bottom: 3.225rem;
 
     background: linear-gradient(
-        to left, hsla(222, 64%, 35%, .625), hsla(222, 61%, 33%, 0.125)
+        to left, rgba(32, 66, 146, 0.725), transparent
     );
 
 
@@ -165,21 +165,270 @@ section.home.hidden .btn {
     transition: none;
 }
 
-/* <--------------------------- ::ABOUT:: SECTION ---------------------------> */
+/* <-------------------------- ::ABOUT:: SECTION --------------------------> */
 section.about .about-inner {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+    padding-bottom: 6.425rem;
+
+    @media screen and (max-width: 1024px) {
+        align-items: unset;
+        justify-content: unset;
+        height: unset;
+    }
 }
 
-section.about .title span {
+section.about .info {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        justify-content: unset;
+    }
+}
+
+section.about .info figure {
+    width: 100%;
+    height: 100%;
+    max-width: 26.225rem;
+    max-height: 26.225rem;
+    /* border-radius: 2rem; */
+    border-radius: 8rem;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(
+        to left, rgba(32, 66, 146, 0.725), transparent
+    );
+    box-shadow: 0 0 2rem rgba(0, 13, 31, .25);
+    animation: spinning 9s linear infinite;
+
+    @media screen and (max-width: 1210px) {
+        min-width: 16.225rem;
+        min-height: 16.225rem;
+        max-height: 22.225rem;
+        max-width: 22.225rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        min-height: 21rem;
+        min-width: 21rem;
+        margin-top: 1.225rem;
+        border-radius: 50%;
+    }
+
+    @media screen and (max-width: 320px) {
+        min-height: 16.225rem;
+        min-width: 16.225rem;
+        max-height: 16.225rem;
+        max-width: 16.225rem;
+    }
+
+    @media screen and (max-width: 280px) {
+        min-height: 14rem;
+        min-width: 14rem;
+        max-height: 14rem;
+        max-width: 14rem;
+    }
+
+    @media screen and (max-width: 240px) {
+        min-height: 12rem;
+        min-width: 12rem;
+        max-height: 12rem;
+        max-width: 12rem;
+    }
+}
+
+section.about .info figure .illustration {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+section.about .info .article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+    max-height: 26.225rem;
+    max-width: 42.225rem;
+
+    background: linear-gradient(
+        to right, rgba(32, 66, 146, 0.725), transparent
+    );
+
+    /* border-right: .3625rem solid var(--yellow-400); */
+    border-radius: 2rem;
+    /* border-top-right-radius: 7.1125rem; */
+    box-shadow: 0 0 2rem rgba(0, 13, 31, .25);
+    padding: 2rem;
+    position: relative;
+
+    @media screen and (max-width: 1210px) {
+        max-height: unset;
+    }
+
+    @media screen and (max-width: 1024px) {
+        background: linear-gradient(
+            to left, rgba(32, 66, 146, 0.725), transparent
+        );
+    }
+
+    @media screen and (max-width: 712px) {
+        gap: 0.925rem;
+    }
+
+}
+
+section.about .info .article::before {
+    content: "";
+    width: 2rem;
+    height: 5rem;
+    background-color: rgba(32, 66, 146, 0.775);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -2rem;
+
+}
+
+section.about .info .article .social-media-container {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+
+    @media screen and (max-width: 712px) {
+        margin-top: 1.225rem;
+    }
+}
+
+section.about .info .article .social-media-container .subtitle {
+    /* color: var(--yellow-400); */
+    font-size: .8225rem;
+    letter-spacing: .1225rem;
+    text-transform: uppercase;
+    font-family: "SF Pro Display";
+
+    /* text-shadow: 0 0 0.425rem var(--yellow-700); */
+}
+
+section.about .info .article .social-media-list {
+    display: flex;
+    gap: .425rem;
+}
+
+section.about .info .article .social-media-list .icon {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 0.225rem rgba(255, 255, 255, 0.525));
+    transition: all .1s ease-in-out;
+}
+
+section.about .info .article .social-media-list .icon:hover {
+    color: var(--yellow-400);
+    filter: drop-shadow(0 0 0.225rem var(--yellow-700));
+    transform: scale(1.125);
+    cursor: pointer;
+}
+
+section.about .info .article .title {
+    color: var(--yellow-400);
+    font-size: 2.225rem;
+    letter-spacing: .1rem;
+    /* text-transform: uppercase; */
+    @media screen and (max-width: 712px) {
+        font-size: 2.025rem;
+    }
+}
+
+section.about .info .article .title span {
     color: var(--yellow-400);
     text-shadow: 0 0 0.65rem var(--yellow-700);
 }
 
-/* <--------------------------- ::TECHNOLOGIES:: SECTION ---------------------------> */
+section.about .info .article .text {
+    font-size: 1.225rem;
+    font-size: 1.05rem;
+    letter-spacing: .1rem;
+    line-height: 1.6rem;
+    margin-top: .2rem;
+    text-shadow: 0 0 2rem #ffffff3f;
+    opacity: .9;
+    font-family: "SF Pro Display";
+}
+
+section.about .roles {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    max-width: 1064px;
+    gap: 2rem;
+
+    @media screen and (max-width: 920px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    @media screen and (max-width: 712px) {
+        max-width: 42.225rem;
+        margin: 0 auto;
+    }
+}
+
+section.about .roles .role {
+    padding: .725rem 2.225rem;
+    border-radius: 2rem;
+    background: linear-gradient(
+        to right, rgba(32, 66, 146, 0.725), transparent
+    );
+    /* color: black; */
+    font-family: "Bai Jamjuree", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    flex: 1;
+    /* color: var(--yellow-400); */
+
+    @media screen and (max-width: 1024px) {
+        background: linear-gradient(
+            to left, rgba(32, 66, 146, 0.725), transparent
+        );
+    }
+}
+
+section.about .roles .role .role-text {
+    display: flex;
+    flex-direction: column;
+}
+
+section.about .roles .role .icon {
+    font-size: 3rem;
+    color: var(--yellow-400);
+    filter: drop-shadow(0 0 0.225rem var(--yellow-700));
+}
+
+section.about .roles .role .role-text strong {
+    font-size: 1.225rem;
+    color: var(--yellow-400);
+    text-shadow: 0 0 0.65rem var(--yellow-700);
+}
+
+section.about .roles .role .role-text span {
+    font-size: .875rem;
+    opacity: .95;
+}
+
+/* <----------------------- ::TECHNOLOGIES:: SECTION -----------------------> */
+
 section.technologies .technologies-inner {
     height: 100%;
     display: flex;
@@ -199,7 +448,7 @@ section.technologies .title span {
 
 
 
-/* <--------------------------- ::PROJECTS:: SECTION ---------------------------> */
+/* <-------------------------- ::PROJECTS:: SECTION -------------------------> */
 section.projects .projects-inner {
     height: 100%;
     display: flex;
@@ -213,7 +462,7 @@ section.projects .title span {
     text-shadow: 0 0 0.65rem var(--yellow-700);
 }
 
-/* <--------------------------- ::CERTIFICATES:: SECTION ---------------------------> */
+/* <------------------------ ::CERTIFICATES:: SECTION ------------------------> */
 section.certificates .certificates-inner {
     height: 100%;
     display: flex;
@@ -227,7 +476,7 @@ section.certificates .title span {
     text-shadow: 0 0 0.65rem var(--yellow-700);
 }
 
-/* <--------------------------- ::CONTACT:: SECTION ---------------------------> */
+/* <-------------------------- ::CONTACT:: SECTION --------------------------> */
 section.contact .contact-inner {
     height: 100%;
     display: flex;
@@ -239,4 +488,10 @@ section.contact .contact-inner {
 section.contact .title span {
     color: var(--yellow-400);
     text-shadow: 0 0 0.65rem var(--yellow-700);
+}
+
+@media screen and (max-width: 1024px) {
+    section.about .article::before {
+        display: none;
+    }
 }
