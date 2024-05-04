@@ -28,6 +28,10 @@
     text-shadow: 0 0 8px var(--yellow-700);
 }
 
+.navbar .nav-link.active .nav-icon {
+    filter: drop-shadow(0 0 0.225rem var(--yellow-700));
+}
+
 .navbar:hover .nav-text {
     animation: fade-out .7s ease-out;
     opacity: 1;
