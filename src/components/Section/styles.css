@@ -224,6 +224,7 @@ section.about .info figure .illustration {
     width: 100%;
     pointer-events: none;
     object-fit: cover;
+    transform: rotate(-12.625deg) translateX(.725rem);
 }
 
 section.about .info .article {
