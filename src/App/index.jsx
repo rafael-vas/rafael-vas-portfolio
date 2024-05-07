@@ -58,28 +58,33 @@ export function App() {
                 <h3 className="subtitle">Reach me out:</h3>
                 <ul className="social-media-list">
                     <li className="social-media">
-                      <a href="https://www.linkedin.com/in/rafaelvas" target="_blank" rel="noopener noreferrer">
+                      <a className="link" href="https://www.linkedin.com/in/rafaelvas" target="_blank" rel="noopener noreferrer">
                         <LinkedinLogo className="icon" />
+                        <span className="label">LinkedIn</span>
                       </a>
                     </li>
                     <li className="social-media">
-                      <a href="mailto:rafaelvas2011@hotmail.com" target="_blank" rel="noopener noreferrer">
+                      <a className="link" href="mailto:rafaelvas2011@hotmail.com" target="_blank" rel="noopener noreferrer">
                         <MicrosoftOutlookLogo className="icon" />
+                        <span className="label">Email</span>
                       </a>
                     </li>
                     <li className="social-media">
-                      <a href="https://github.com/rafael-vas" target="_blank" rel="noopener noreferrer">
+                      <a className="link" href="https://github.com/rafael-vas" target="_blank" rel="noopener noreferrer">
                         <GithubLogo className="icon" />
+                        <span className="label">GitHub</span>
                       </a>
                     </li>
                     <li className="social-media">
-                      <a href="https://www.instagram.com/hafaeeu" target="_blank" rel="noopener noreferrer">
+                      <a className="link" href="https://www.instagram.com/hafaeeu" target="_blank" rel="noopener noreferrer">
                         <InstagramLogo className="icon" />
+                        <span className="label">Instagram</span>
                       </a>
                     </li>
                     <li className="social-media">
-                      <a href="https://wa.me/5581987665063?text=Olá, gostaria de entrar em contato com Rafael Vasconcelos." target="_blank" rel="noopener noreferrer">
+                      <a className="link" href="https://wa.me/5581987665063?text=Olá, gostaria de entrar em contato com Rafael Vasconcelos." target="_blank" rel="noopener noreferrer">
                         <WhatsappLogo className="icon" />
+                        <span className="label">WhatsApp</span>
                       </a>
                     </li>
                 </ul>
