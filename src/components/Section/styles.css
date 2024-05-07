@@ -13,31 +13,6 @@ section.home .home-inner {
     align-items: center;
     gap: .8rem;
     height: 100%;
-    /* background-position: bottom; */
-    /* background-repeat: no-repeat; */
-}
-
-section.home .home-inner .avatar {
-    /* width: 130px; */
-    width: 9rem;
-    animation: bounce 7s ease-in-out infinite;
-}
-
-@keyframes bounce {
-    0% {
-        transform: translate(-6px) rotate(-4deg) scale(.98);
-        opacity: 0.3;
-    }
-
-    20% {
-        transform: translate(6px) rotate(4deg) scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(-6px) rotate(-4deg) scale(.98);
-        opacity: 0.3;
-    }
 }
 
 section.home .home-inner .article {
@@ -47,7 +22,6 @@ section.home .home-inner .article {
     gap: 1rem;
     padding-bottom: 5rem;
     max-width: 50rem;
-    /* background-color: hsla(0, 0%, 100%, 0.015); */
     padding: 3.225rem 2.575rem;
     border-radius: 2rem;
     border-right: .725rem solid var(--yellow-400);
@@ -61,7 +35,6 @@ section.home .home-inner .article {
 
 
     @media screen and (max-width: 992px) {
-        /* align-items: center; */
         padding-top: 0;
         padding-bottom: 0;
         max-width: 44rem;
@@ -76,12 +49,7 @@ section.home .home-inner .article {
 }
 
 section.home .home-inner .title, .home-inner .text {
-    /* text-transform: capitalize; */
     text-align: start;
-
-    @media screen and (max-width: 992px) {
-        /* text-align: center; */
-    }
 }
 
 section.home .home-inner .greeting {
@@ -95,7 +63,6 @@ section.home .home-inner .greeting {
 }
 
 section.home .home-inner .title {
-    /* font-size: 3.75rem; */
     font-size: 4.5rem;
     letter-spacing: .1rem;
 
@@ -197,18 +164,19 @@ section.about .info {
 }
 
 section.about .info figure {
+    margin-top: 1.425rem;
     width: 100%;
     height: 100%;
-    max-width: 26.225rem;
-    max-height: 26.225rem;
-    /* border-radius: 2rem; */
-    border-radius: 8rem;
+    max-width: 25.625rem;
+    max-height: 25.625rem;
+    border-radius: 50%;
     overflow: hidden;
     position: relative;
     background: linear-gradient(
         to left, rgba(32, 66, 146, 0.725), transparent
     );
     box-shadow: 0 0 2rem rgba(0, 13, 31, .25);
+    transition: transform .1s ease-in-out;
     animation: spinning 9s linear infinite;
 
     @media screen and (max-width: 1210px) {
@@ -219,33 +187,36 @@ section.about .info figure {
     }
 
     @media screen and (max-width: 1024px) {
-
         min-height: 21rem;
         min-width: 21rem;
         margin-top: 1.225rem;
         border-radius: 50%;
     }
 
+    @media screen and (max-width: 375px) {
+        min-height: 20.625rem;
+        min-width: 20.625rem;
+        max-height: 20.625rem;
+        max-width: 20.625rem;
+    }
+
     @media screen and (max-width: 320px) {
-        min-height: 16.225rem;
-        min-width: 16.225rem;
-        max-height: 16.225rem;
-        max-width: 16.225rem;
+        min-height: 18.225rem;
+        min-width: 18.225rem;
+        max-height: 18.225rem;
+        max-width: 18.225rem;
     }
 
     @media screen and (max-width: 280px) {
-        min-height: 14rem;
-        min-width: 14rem;
-        max-height: 14rem;
-        max-width: 14rem;
+        min-height: 16rem;
+        min-width: 16rem;
+        max-height: 16rem;
+        max-width: 16rem;
     }
+}
 
-    @media screen and (max-width: 240px) {
-        min-height: 12rem;
-        min-width: 12rem;
-        max-height: 12rem;
-        max-width: 12rem;
-    }
+section.about .info figure:hover {
+    transform: scale(1.045);
 }
 
 section.about .info figure .illustration {
@@ -262,15 +233,7 @@ section.about .info .article {
     height: 100%;
     max-height: 26.225rem;
     max-width: 42.225rem;
-
-    background: linear-gradient(
-        to right, rgba(32, 66, 146, 0.725), transparent
-    );
-
-    /* border-right: .3625rem solid var(--yellow-400); */
     border-radius: 2rem;
-    /* border-top-right-radius: 7.1125rem; */
-    box-shadow: 0 0 2rem rgba(0, 13, 31, .25);
     padding: 2rem;
     position: relative;
 
@@ -278,34 +241,19 @@ section.about .info .article {
         max-height: unset;
     }
 
-    @media screen and (max-width: 1024px) {
-        background: linear-gradient(
-            to left, rgba(32, 66, 146, 0.725), transparent
-        );
-    }
-
     @media screen and (max-width: 712px) {
         gap: 0.925rem;
+        background: linear-gradient(to left, rgba(32, 66, 146, 0.725), transparent);
+        box-shadow: 0 0 2rem rgba(0, 13, 31, 0.25);
     }
-
-}
-
-section.about .info .article::before {
-    content: "";
-    width: 2rem;
-    height: 5rem;
-    background-color: rgba(32, 66, 146, 0.775);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -2rem;
 
 }
 
 section.about .info .article .social-media-container {
     display: flex;
     flex-direction: column;
-    gap: .625rem;
+    gap: 1.025rem;
+    margin-top: .575rem;
 
     @media screen and (max-width: 712px) {
         margin-top: 1.225rem;
@@ -313,38 +261,64 @@ section.about .info .article .social-media-container {
 }
 
 section.about .info .article .social-media-container .subtitle {
-    /* color: var(--yellow-400); */
     font-size: .8225rem;
     letter-spacing: .1225rem;
     text-transform: uppercase;
     font-family: "SF Pro Display";
-
-    /* text-shadow: 0 0 0.425rem var(--yellow-700); */
 }
 
 section.about .info .article .social-media-list {
     display: flex;
-    gap: .425rem;
+    gap: 1.625rem;
+
+    @media screen and (max-width: 1024px) {
+        gap: .375rem;
+    }
 }
 
-section.about .info .article .social-media-list .icon {
-    font-size: 2rem;
-    filter: drop-shadow(0 0 0.225rem rgba(255, 255, 255, 0.525));
+section.about .info .article .social-media-list .link {
+    display: flex;
+    align-items: center;
+    gap: .225rem;
     transition: all .1s ease-in-out;
 }
 
-section.about .info .article .social-media-list .icon:hover {
+section.about .info .article .social-media-list .link:hover {
+    transform: scale(1.105);
+    cursor: pointer;
+}
+
+section.about .info .article .social-media-list .link .icon {
+    font-size: 1.925rem;
+    filter: drop-shadow(0 0 0.225rem rgba(255, 255, 255, 0.525));
+}
+
+section.about .info .article .social-media-list .link .label {
+    font-size: .675rem;
+    text-transform: uppercase;
+    font-family: "SF Pro Display";
+    letter-spacing: .1rem;
+    text-shadow: 0 0 0.225rem rgba(255, 255, 255, 0.825);
+
+    @media screen and (max-width: 1024px) {
+        visibility: hidden;
+        max-height: 0;
+        max-width: 0;
+    }
+}
+
+section.about .info .article .social-media-list .link:hover .icon,
+section.about .info .article .social-media-list .link:hover .label{
     color: var(--yellow-400);
     filter: drop-shadow(0 0 0.225rem var(--yellow-700));
-    transform: scale(1.125);
-    cursor: pointer;
+    text-shadow: 0 0 0.225rem var(--yellow-700);
 }
 
 section.about .info .article .title {
     color: var(--yellow-400);
     font-size: 2.225rem;
     letter-spacing: .1rem;
-    /* text-transform: uppercase; */
+
     @media screen and (max-width: 712px) {
         font-size: 2.025rem;
     }
@@ -356,7 +330,6 @@ section.about .info .article .title span {
 }
 
 section.about .info .article .text {
-    font-size: 1.225rem;
     font-size: 1.05rem;
     letter-spacing: .1rem;
     line-height: 1.6rem;
@@ -385,18 +358,17 @@ section.about .roles {
 }
 
 section.about .roles .role {
-    padding: .725rem 2.225rem;
+    padding: .775rem 2rem;
     border-radius: 2rem;
     background: linear-gradient(
         to right, rgba(32, 66, 146, 0.725), transparent
     );
-    /* color: black; */
+    box-shadow: 0 0 2rem rgba(0, 13, 31, 0.25);
     font-family: "Bai Jamjuree", sans-serif;
     display: flex;
     align-items: center;
     gap: .625rem;
     flex: 1;
-    /* color: var(--yellow-400); */
 
     @media screen and (max-width: 1024px) {
         background: linear-gradient(
@@ -462,7 +434,9 @@ section.projects .title span {
     text-shadow: 0 0 0.65rem var(--yellow-700);
 }
 
-/* <------------------------ ::CERTIFICATES:: SECTION ------------------------> */
+
+
+/* <----------------------- ::CERTIFICATES:: SECTION -----------------------> */
 section.certificates .certificates-inner {
     height: 100%;
     display: flex;
@@ -476,7 +450,7 @@ section.certificates .title span {
     text-shadow: 0 0 0.65rem var(--yellow-700);
 }
 
-/* <-------------------------- ::CONTACT:: SECTION --------------------------> */
+/* <------------------------- ::CONTACT:: SECTION -------------------------> */
 section.contact .contact-inner {
     height: 100%;
     display: flex;
