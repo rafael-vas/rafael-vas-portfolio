@@ -134,18 +134,23 @@ section.home.hidden .btn {
 
 /* <-------------------------- ::ABOUT:: SECTION --------------------------> */
 section.about .about-inner {
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    /* justify-content: center; */
+    gap: 5.225rem;
     padding-bottom: 6.425rem;
 
     @media screen and (max-width: 1024px) {
         align-items: unset;
         justify-content: unset;
         height: unset;
+        gap: 4.225rem;
+    }
+
+    @media screen and (max-width: 375px) {
+        gap: 3.625rem;
     }
 }
 
@@ -167,6 +172,8 @@ section.about .info figure {
     margin-top: 1.425rem;
     width: 100%;
     height: 100%;
+    min-width: 25.625rem;
+    min-height: 25.625rem;
     max-width: 25.625rem;
     max-height: 25.625rem;
     border-radius: 50%;
