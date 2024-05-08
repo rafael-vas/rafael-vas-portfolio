@@ -1,0 +1,35 @@
+section.about .summary .summary-content ul > li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.about .summary .summary-content ul > li .icon {
+    font-size: 2.225rem;
+    color: var(--yellow-400);
+    filter: drop-shadow(0 0 0.225rem var(--yellow-700));
+}
+
+section.about .summary .summary-content ul > li.idiom .icon {
+    max-width: 2.225rem;
+    filter: none;
+}
+
+section.about .summary .summary-content ul > li .text {
+    display: flex;
+    flex-direction: column;
+    gap: .125rem;
+    flex: 1;
+}
+
+section.about .summary .summary-content ul > li .text .label {
+    text-shadow: 0 0 0.325rem rgba(255, 255, 255, 0.825);
+}
+
+section.about .summary .summary-content ul > li .text .description {
+    font-family: "SF Pro Display";
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    font-size: .725rem;
+    opacity: .65;
+}
