@@ -1,0 +1,22 @@
+section.about .summary .summary-header strong {
+    flex: 1;
+    text-align: center;
+    padding: 0.925rem 1.225rem;
+    border-top-right-radius: .825rem;
+    border-top-left-radius: .825rem;
+    opacity: .5;
+    transition: all .0925s ease-in-out;
+}
+
+section.about .summary .summary-header strong:not(.active):hover {
+    cursor: pointer;
+    background-color: rgba(32, 66, 146, 0.725);
+    opacity: 1;
+}
+
+section.about .summary .summary-header strong.active {
+    background: rgba(0, 0, 0, 0.175);
+    color: var(--yellow-400);
+    text-shadow: 0 0 0.65rem var(--yellow-700);
+    opacity: 1;
+}
