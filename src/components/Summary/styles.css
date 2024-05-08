@@ -1,0 +1,16 @@
+section.about .summary {
+    width: 100%;
+    min-height: 18rem;
+    max-width: 1064px;
+    display: flex;
+    flex-direction: column;
+}
+
+section.about .summary .summary-header {
+    display: flex;
+}
+
+section.about .summary .summary-content {
+    display: flex;
+    position: relative;
+}
