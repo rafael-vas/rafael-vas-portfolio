@@ -11,6 +11,7 @@ import { Design } from "../components/Design";
 import { Header } from "../components/Header";
 import { Navbar } from "../components/Navbar";
 import { Section } from "../components/Section";
+import { Summary } from "../components/Summary";
 
 export function App() {
 
@@ -114,6 +115,8 @@ export function App() {
             </p>
           </li>
         </ul>
+        <Summary />
+
       </Section>
 
       <Section name="technologies">
