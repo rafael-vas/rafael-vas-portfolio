@@ -134,3 +134,13 @@ a {
     opacity: 1;
   }
 }
+
+@keyframes disappear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
