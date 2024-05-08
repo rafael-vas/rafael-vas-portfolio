@@ -1,0 +1,24 @@
+section.about .summary .summary-content ul {
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.175);
+    padding: 1.425rem 1.225rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.225rem;
+
+    border-bottom-left-radius: .825rem;
+    border-bottom-right-radius: .825rem;
+}
+
+section.about .summary .summary-content ul.active {
+    animation: disappear 0.4s ease-in-out;
+}
+
+section.about .summary .summary-content ul.hidden {
+    visibility: hidden;
+    max-height: 0;
+    max-width: 0;
+    padding: 0;
+    margin: 0;
+}
