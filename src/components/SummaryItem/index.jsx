@@ -6,7 +6,12 @@ export function SummaryItem({ label, icon, textLabel, textDescription }) {
             {icon}
             <p className="text">
               <span className="label">{textLabel}</span>
-              <span className="description">{textDescription}</span>
+
+                {
+                  textDescription &&
+                  <span className="description">{textDescription}</span>
+                }
+
             </p>
         </li>
     )
