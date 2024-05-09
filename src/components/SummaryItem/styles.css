@@ -1,32 +1,112 @@
-section.about .summary .summary-content ul > li {
+.summary .summary-content ul > li {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-section.about .summary .summary-content ul > li .icon {
+section.technologies .summary .summary-content ul.soft-skill-list > li,
+section.technologies .summary .summary-content ul.hard-skill-list > li {
+    padding: 1rem 1.625rem;
+    /* flex: 1 0 4rem; */
+    background: linear-gradient(
+        to bottom, rgba(32, 66, 146, 0.725), transparent
+    );
+    box-shadow: 0 0 2rem rgba(0, 13, 31, 0.25);
+    gap: .725rem;
+    border-radius: 0.625rem;
+    max-width: 11.625rem;
+    width: 100%;
+
+    @media screen and (max-width: 1153px) {
+        flex: 1 0 16rem;
+        max-width: none;
+        width: none;
+    }
+
+    @media screen and (max-width: 900px) {
+        flex: 1 0 11rem;
+    }
+
+    @media screen and (max-width: 736px) {
+        padding: 0.825rem 1.125rem;
+        flex: 1 0 10.625rem;
+    }
+
+    @media screen and (max-width: 429px) {
+        padding: 0.625rem 0.925rem;
+        flex: 1 0 7.625rem;
+        flex-direction: column;
+    }
+}
+
+section.technologies .summary .summary-content ul.soft-skill-list > li {
+    max-width: 15.925rem;
+
+    @media screen and (max-width: 1153px) {
+        flex: 1 0 16rem;
+        max-width: none;
+        width: none;
+    }
+
+    @media screen and (max-width: 900px) {
+        flex: 1 0 15rem;
+    }
+
+    @media screen and (max-width: 736px) {
+        padding: 0.825rem 1.125rem;
+        flex: 1 0 14.625rem;
+    }
+
+    @media screen and (max-width: 429px) {
+        padding: 0.625rem 0.925rem;
+        flex: 1 0 10.425rem;
+        flex-direction: column;
+    }
+}
+
+.summary .summary-content ul > li .icon {
     font-size: 2.225rem;
     color: var(--yellow-400);
     filter: drop-shadow(0 0 0.225rem var(--yellow-700));
 }
 
-section.about .summary .summary-content ul > li.idiom .icon {
+section.technologies .summary .summary-content ul.soft-skill-list > li .icon,
+section.technologies .summary .summary-content ul.hard-skill-list > li .icon {
+    filter: none;
+    width: 2.225rem;
+
+}
+
+.summary .summary-content ul > li.idiom .icon {
     max-width: 2.225rem;
     filter: none;
 }
 
-section.about .summary .summary-content ul > li .text {
+.summary .summary-content ul > li .text {
     display: flex;
     flex-direction: column;
     gap: .125rem;
     flex: 1;
 }
 
-section.about .summary .summary-content ul > li .text .label {
+section.technologies .summary .summary-content ul > li .text,
+section.technologies .summary .summary-content ul > li .text .label {
+    flex: none;
+    width: fit-content;
+    font-family: "SF Pro Display";
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    font-weight: bold;
+    font-size: .725rem;
+    opacity: .95;
+    text-shadow: none;
+}
+
+.summary .summary-content ul > li .text .label {
     text-shadow: 0 0 0.325rem rgba(255, 255, 255, 0.825);
 }
 
-section.about .summary .summary-content ul > li .text .description {
+.summary .summary-content ul > li .text .description {
     font-family: "SF Pro Display";
     text-transform: uppercase;
     letter-spacing: .125rem;
