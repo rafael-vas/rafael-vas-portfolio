@@ -169,7 +169,7 @@ section.about .info {
 }
 
 section.about .info figure {
-    margin-top: 1.425rem;
+    margin-top: 2.625rem;
     width: 100%;
     height: 100%;
     min-width: 25.625rem;
@@ -262,6 +262,7 @@ section.about .info .article .social-media-container {
     flex-direction: column;
     gap: 1.025rem;
     margin-top: .575rem;
+    width: 100%;
 
     @media screen and (max-width: 712px) {
         margin-top: 1.225rem;
@@ -277,18 +278,27 @@ section.about .info .article .social-media-container .subtitle {
 
 section.about .info .article .social-media-list {
     display: flex;
-    gap: 1.625rem;
+    gap: 1.025rem;
+    width: 100%;
 
     @media screen and (max-width: 1024px) {
         gap: .375rem;
     }
 }
 
+section.about .info .article .social-media-list .social-media {
+    flex: 1;
+}
+
 section.about .info .article .social-media-list .link {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: .225rem;
     transition: all .1s ease-in-out;
+    background: hsla(0, 0%, 0%, 0.150);
+    padding: .825rem;
+    border-radius: .425rem;
 }
 
 section.about .info .article .social-media-list .link:hover {
@@ -413,13 +423,21 @@ section.technologies .technologies-inner {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    gap: 1.625rem;
+    /* justify-content: center; */
+}
+
+section.technologies .title {
+    margin-left: 13.225rem;
+    margin-top: 2rem;
 }
 
 section.technologies .title span {
-    color: var(--yellow-400);
-    text-shadow: 0 0 0.65rem var(--yellow-700);
+    /* color: var(--yellow-400); */
+    /* text-shadow: 0 0 0.65rem var(--yellow-700); */
+    font-size: 1.725rem;
+    letter-spacing: .1rem;
 }
 
 
