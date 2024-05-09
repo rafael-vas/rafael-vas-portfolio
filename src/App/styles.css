@@ -137,6 +137,7 @@ a {
 
 @keyframes disappear {
   from {
+    transform: translate(-.225rem);
     opacity: 0;
   }
 
