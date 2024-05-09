@@ -2,7 +2,7 @@ import "./styles.css";
 
 const cvLink = "https://drive.google.com/file/d/1LoEPMgwWAh4BoRtNWx7ZyBGqlNCBDc_q/view?usp=sharing"
 
-// import avatar from "../assets/avatar.png";
+
 import illustration from "../assets/illustration.png";
 
 import { DownloadSimple, CheckCircle, LinkedinLogo, GithubLogo, WhatsappLogo, InstagramLogo, MicrosoftOutlookLogo } from "@phosphor-icons/react";
@@ -11,7 +11,14 @@ import { Design } from "../components/Design";
 import { Header } from "../components/Header";
 import { Navbar } from "../components/Navbar";
 import { Section } from "../components/Section";
+
+import { lists } from "../components/Summary/data";
+
 import { Summary } from "../components/Summary";
+import { SummaryHeader } from "../components/SummaryHeader";
+import { SummaryTitle } from "../components/SummaryTitle";
+import { SummaryContent } from "../components/SummaryContent";
+import { SummaryList } from "../components/SummaryList";
 
 export function App() {
 
@@ -22,17 +29,12 @@ export function App() {
       <Navbar />
 
       <Section name="home" active>
-        {/* <img className="avatar" src={avatar} alt="An avatar of me" /> */}
         <article className="article">
           <p className="greeting">Hey, there!</p>
           <h1 className="title">
             I&apos;m <span>Rafael Vas</span>.
-            {/* Great to see you! */}
           </h1>
           <p className="text">
-            {/* As a <span>Front-End Developer</span>, I merge design and
-            development to create exceptional digital experiences. My focus is
-            on quality work, where web development meets innovation. */}
             I&apos;m a <span>Front-end Developer</span> with years of experience in web development, working with both large and small companies as a freelancer and in teams.
           </p>
           <a
@@ -115,14 +117,72 @@ export function App() {
             </p>
           </li>
         </ul>
-        <Summary />
+
+        <Summary>
+          <SummaryHeader>
+            <SummaryTitle
+              forSection="about"
+              titleName="experience"
+              titleContent="Experiences"
+              active
+            />
+            <SummaryTitle
+              forSection="about"
+              titleName="course"
+              titleContent="Education"
+            />
+            <SummaryTitle
+              forSection="about"
+              titleName="idiom"
+              titleContent="Idioms"
+            />
+          </SummaryHeader>
+          <SummaryContent>
+            <SummaryList
+              active
+              listName="experience"
+              listContent={lists.experiences}
+            />
+            <SummaryList
+              listName="course"
+              listContent={lists.courses}
+            />
+            <SummaryList
+              listName="idiom"
+              listContent={lists.idioms}
+            />
+          </SummaryContent>
+        </Summary>
 
       </Section>
 
       <Section name="technologies">
-        <h1 className="title">
-          This is <span>Technologies</span> Section
-        </h1>
+        <Summary>
+          <SummaryHeader>
+              <SummaryTitle
+                forSection="technologies"
+                titleName="hard-skill"
+                titleContent="Hard Skills"
+                active
+              />
+              <SummaryTitle
+                forSection="technologies"
+                titleName="soft-skill"
+                titleContent="Soft Skills"
+              />
+          </SummaryHeader>
+          <SummaryContent>
+            <SummaryList
+              active
+              listName="hard-skill"
+              listContent={lists.hardSkills}
+            />
+            <SummaryList
+              listName="soft-skill"
+              listContent={lists.softSkills}
+            />
+          </SummaryContent>
+        </Summary>
       </Section>
 
       <Section name="projects">
