@@ -1,14 +1,16 @@
 import "./styles.css"
 
-export function SummaryTitle({ active=false, titleName, titleContent }) {
+export function SummaryTitle({ active=false, titleName, titleContent, forSection }) {
 
     function handleShowClickedList(e) {
         const activeList = e.currentTarget
         const listsTitle = document.querySelectorAll(
-            ".summary-header > strong"
+            `.${forSection} .summary-header > strong`
         );
 
-        const lists = document.querySelectorAll(".summary-content > ul");
+        const lists = document.querySelectorAll(
+            `.${forSection} .summary-content > ul`
+        );
 
         listsTitle.forEach((listTitle, index) => {
             if (listTitle == activeList) {
