@@ -1,16 +1,26 @@
-section.about .summary {
+.summary {
     width: 100%;
     min-height: 18rem;
     max-width: 1064px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-section.about .summary .summary-header {
+section.technologies .summary {
+    margin-top: 8.225rem;
+    max-width: 54.875rem;
+
+    @media screen and (max-width: 1156px) {
+        margin-top: 2.625rem;
+    }
+}
+
+.summary .summary-header {
     display: flex;
 }
 
-section.about .summary .summary-content {
+.summary .summary-content {
     display: flex;
     position: relative;
 }
