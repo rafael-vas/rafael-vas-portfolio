@@ -4,14 +4,16 @@ section.contact form {
     gap: 2.225rem;
     width: 100%;
     padding: 2rem;
-    /* background: linear-gradient(
-        to right, rgba(32, 66, 146, 0.725), transparent
-    ); */
-    /* box-shadow: 0 0 2rem rgba(0, 13, 31, .25); */
     max-width: 42.625rem;
     border-radius: .625rem;
 
-    /* background: rgba(0, 0, 0, 0.175); */
+    @media screen and (max-width: 712px) {
+        margin-top: 4.225rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        margin-top: 8.225rem;
+    }
 }
 
 section.contact form .form-field {
@@ -24,7 +26,6 @@ section.contact form .form-field label {
     display: flex;
     align-items: center;
     gap: .675rem;
-
     font-family: "SF Pro Display";
     text-transform: uppercase;
     letter-spacing: .125rem;
@@ -48,31 +49,24 @@ section.contact form .form-field textarea {
     letter-spacing: 0.025rem;
     border: none;
     outline: none;
-    background-color: rgba(0, 0, 0, 0.175);
     color: rgba(255, 255, 255, 0.850);
     border-radius: .425rem;
-
-
-    background: linear-gradient(
-        to right, rgba(32, 66, 146, 0.725), transparent
-    );
-
-
     background: rgba(0, 0, 0, 0.225);
-
-    box-shadow: 0 0 1.425rem rgba(0, 13, 31, .1);
+    box-shadow: 0 0 1.425rem rgba(0, 13, 31, .25);
 }
 
 section.contact form .form-field input:focus,
 section.contact form .form-field textarea:focus {
-    box-shadow: 0 0 1.425rem rgba(32, 66, 146, 0.725);
+    background: rgba(0, 0, 0, 0.325);
+    box-shadow: 0 0 1.425rem rgba(0, 13, 31, .325);
 }
 
 section.contact form button {
     margin-top: 3.225rem;
     font-size: .825rem;
     padding: .625rem 1.825rem;
-    background-color: var(--yellow-700);
+    background-color: var(--yellow-400);
+    box-shadow: 0 0 .8rem var(--yellow-700);
     color: var(--color-secondary);
     border: 2px solid #ffffff0e;
     font-weight: bold;
@@ -81,16 +75,13 @@ section.contact form button {
     border-top-right-radius: 12px;
     cursor: pointer;
     text-transform: uppercase;
-    /* box-shadow: 0 0 .8rem var(--yellow-700); */
     transition: all .3s ease-in-out;
 }
 
 section.contact form button:hover {
     background-color: #162f6a;
-    background-color: var(--yellow-400);
-    /* box-shadow: 0 0 .8rem #2d61bc83; */
-    box-shadow: 0 0 .8rem var(--yellow-700);
-    /* color: #fff; */
+    box-shadow: 0 0 .8rem #2d61bc83;
+    color: #fff;
     transform: translate(3px) scale(1.01) rotate(1deg);
 }
 
