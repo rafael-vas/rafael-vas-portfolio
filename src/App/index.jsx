@@ -102,11 +102,6 @@ export function App() {
                       icon={<LinkedinLogo className="icon" />}
                     />
                     <SocialMediaItem
-                      link="https://www.linkedin.com/in/rafaelvas"
-                      label="LinkedIn"
-                      icon={<LinkedinLogo className="icon" />}
-                    />
-                    <SocialMediaItem
                       link="mailto:rafaelvas2011@hotmail.com"
                       label="Email"
                       icon={<MicrosoftOutlookLogo className="icon" />}
