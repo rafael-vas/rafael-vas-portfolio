@@ -8,7 +8,7 @@ export function ContactForm() {
   const [state, handleSubmit] = useForm("xvoeygbw");
 
   if (state.succeeded) {
-      return <h1>Thanks for joining!</h1>;
+      return <h1>Your <span>message</span> was sent!</h1>;
   }
 
   const errors = state.errors?.getFormErrors();
