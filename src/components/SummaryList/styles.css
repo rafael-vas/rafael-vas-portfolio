@@ -1,5 +1,6 @@
 .summary .summary-content ul {
-    position: absolute;
+    height: fit-content;
+    /* position: absolute; */
     width: 100%;
     background: rgba(0, 0, 0, 0.175);
     padding: 1.425rem 1.225rem;
@@ -29,4 +30,5 @@ section.technologies .summary .summary-content ul {
     max-width: 0;
     padding: 0;
     margin: 0;
+    display: none;
 }
