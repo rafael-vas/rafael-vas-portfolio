@@ -5,14 +5,26 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 2rem rgba(0, 13, 31, .25);
+}
+
+section.about .summary {
+    min-height: unset;
+    max-width: unset;
+    margin: 0;
 }
 
 section.technologies .summary {
-    margin-top: 8.225rem;
+    margin-top: 8.625rem;
     max-width: 54.875rem;
 
     @media screen and (max-width: 1156px) {
         margin-top: 2.625rem;
+        height: fit-content;
+    }
+
+    @media screen and (max-width: 712px) {
+        margin-top: 4.225rem;
     }
 }
 
@@ -20,7 +32,14 @@ section.technologies .summary {
     display: flex;
 }
 
+section.about .summary .summary-header {
+    @media screen and (max-width: 295px) {
+        flex-direction: column;
+    }
+}
+
 .summary .summary-content {
     display: flex;
     position: relative;
+    height: fit-content;
 }
