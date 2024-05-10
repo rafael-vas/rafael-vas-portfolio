@@ -8,6 +8,12 @@
 
 .navbar .nav-link.active {
     color: var(--yellow-400);
+
+    @media screen and (max-width: 712px) {
+        color: var(--color-secondary);
+        background-color: var(--yellow-400);
+        box-shadow: 0 0 .8rem var(--yellow-700);
+    }
 }
 
 .navbar .nav-link:hover:not(.nav-link.active) {
@@ -30,6 +36,10 @@
 
 .navbar .nav-link.active .nav-icon {
     filter: drop-shadow(0 0 0.225rem var(--yellow-700));
+
+    @media screen and (max-width: 712px) {
+        filter: drop-shadow(0 0 0.075rem var(--yellow-700));
+    }
 }
 
 .navbar:hover .nav-text {
