@@ -19,34 +19,34 @@ import { Briefcase, GraduationCap, AirplaneTilt, ChatCircleDots, Lightbulb, User
 export const lists = {
   experiences: [
     {
-      icon: <AirplaneTilt className="icon" />,
+      icon: <AirplaneTilt className="icon" weight="fill" />,
       textLabel: "Exchange Student in Canada",
       textDescription: "NB International Student Program",
     },
     {
-      icon: <Briefcase className="icon" />,
+      icon: <Briefcase className="icon" weight="fill" />,
       textLabel: "Web Designer",
       textDescription: "Atimo US",
     },
     {
-      icon: <Briefcase className="icon" />,
+      icon: <Briefcase className="icon" weight="fill" />,
       textLabel: "Programming Monitor",
       textDescription: "Federal Institute of Pernambuco",
     },
   ],
   courses: [
     {
-      icon: <GraduationCap className="icon" />,
+      icon: <GraduationCap className="icon" weight="fill" />,
       textLabel: "Front-end Programming Course",
       textDescription: "DevQuest",
     },
     {
-      icon: <GraduationCap className="icon" />,
+      icon: <GraduationCap className="icon" weight="fill" />,
       textLabel: "UX Design Fundamentals Course",
       textDescription: "Google",
     },
     {
-      icon: <GraduationCap className="icon" />,
+      icon: <GraduationCap className="icon" weight="fill" />,
       textLabel: "Bachelor of Technology in Software Development",
       textDescription: "Tiradentes University",
     },
