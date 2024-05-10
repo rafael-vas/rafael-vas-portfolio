@@ -89,7 +89,7 @@ a {
 
 @media screen and (max-width: 425px) {
   html {
-    font-size: 75.725%;
+    font-size: 80.725%;
   }
 
 
@@ -103,7 +103,7 @@ a {
 
 @media screen and (max-width: 320px) {
   html {
-    font-size: 70.225%;
+    font-size: 75.225%;
   }
 }
 
@@ -143,5 +143,15 @@ a {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes spinning {
+  from {
+      transform: rotate(360deg);
+  }
+
+  to {
+      transform: rotate(0);
   }
 }
