@@ -95,15 +95,16 @@ section.technologies .summary .summary-content ul > li .text .label {
     width: fit-content;
     font-family: "SF Pro Display";
     text-transform: uppercase;
-    letter-spacing: .125rem;
+    letter-spacing:.125rem;
     font-weight: bold;
-    font-size: .725rem;
+    font-size: .825rem;
     opacity: .95;
-    text-shadow: none;
 }
 
 .summary .summary-content ul > li .text .label {
-    text-shadow: 0 0 0.325rem rgba(255, 255, 255, 0.825);
+    font-weight: bold;
+    text-shadow: 0 0 0.325rem rgba(255, 255, 255, 0.425);
+    letter-spacing: .0425rem;
 }
 
 .summary .summary-content ul > li .text .description {
