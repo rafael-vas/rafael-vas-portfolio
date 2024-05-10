@@ -19,6 +19,9 @@ import { SummaryHeader } from "../components/SummaryHeader";
 import { SummaryTitle } from "../components/SummaryTitle";
 import { SummaryContent } from "../components/SummaryContent";
 import { SummaryList } from "../components/SummaryList";
+import { ContactForm } from "../components/ContactForm";
+import { SocialMediaItem } from "../components/SocialMediaItem";
+import { RoleItem } from "../components/RoleItem";
 
 export function App() {
 
@@ -54,105 +57,95 @@ export function App() {
             <figure>
               <img className="illustration" src={illustration} alt="An illustration of me" />
             </figure>
-            <article className="article">
-              <h2 className="title"><span>About me</span></h2>
-              <p className="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, modi tempore nam expedita tempora possimus pariatur fugit magnam, esse impedit neque? Veritatis commodi a aliquam ratione ipsam dicta asperiores minus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor similique vitae esse, reiciendis eos, fugiat repellat animi quod pariatur accusamus laboriosam modi, dicta accusantium facilis consequatur. Mollitia quibusdam inventore neque.</p>
+            <div className="info-wrapper">
+              <Summary>
+                <SummaryHeader>
+                  <SummaryTitle
+                    forSection="about"
+                    titleName="experience"
+                    titleContent="Experiences"
+                    active
+                  />
+                  <SummaryTitle
+                    forSection="about"
+                    titleName="course"
+                    titleContent="Education"
+                  />
+                  <SummaryTitle
+                    forSection="about"
+                    titleName="idiom"
+                    titleContent="Idioms"
+                  />
+                </SummaryHeader>
+                <SummaryContent>
+                  <SummaryList
+                    active
+                    listName="experience"
+                    listContent={lists.experiences}
+                  />
+                  <SummaryList
+                    listName="course"
+                    listContent={lists.courses}
+                  />
+                  <SummaryList
+                    listName="idiom"
+                    listContent={lists.idioms}
+                  />
+                </SummaryContent>
+              </Summary>
               <div className="social-media-container">
                 <h3 className="subtitle">Reach me out:</h3>
                 <ul className="social-media-list">
-                    <li className="social-media">
-                      <a className="link" href="https://www.linkedin.com/in/rafaelvas" target="_blank" rel="noopener noreferrer">
-                        <LinkedinLogo className="icon" />
-                        <span className="label">LinkedIn</span>
-                      </a>
-                    </li>
-                    <li className="social-media">
-                      <a className="link" href="mailto:rafaelvas2011@hotmail.com" target="_blank" rel="noopener noreferrer">
-                        <MicrosoftOutlookLogo className="icon" />
-                        <span className="label">Email</span>
-                      </a>
-                    </li>
-                    <li className="social-media">
-                      <a className="link" href="https://github.com/rafael-vas" target="_blank" rel="noopener noreferrer">
-                        <GithubLogo className="icon" />
-                        <span className="label">GitHub</span>
-                      </a>
-                    </li>
-                    <li className="social-media">
-                      <a className="link" href="https://www.instagram.com/hafaeeu" target="_blank" rel="noopener noreferrer">
-                        <InstagramLogo className="icon" />
-                        <span className="label">Instagram</span>
-                      </a>
-                    </li>
-                    <li className="social-media">
-                      <a className="link" href="https://wa.me/5581987665063?text=Olá, gostaria de entrar em contato com Rafael Vasconcelos." target="_blank" rel="noopener noreferrer">
-                        <WhatsappLogo className="icon" />
-                        <span className="label">WhatsApp</span>
-                      </a>
-                    </li>
+                    <SocialMediaItem
+                      link="https://www.linkedin.com/in/rafaelvas"
+                      label="LinkedIn"
+                      icon={<LinkedinLogo className="icon" />}
+                    />
+                    <SocialMediaItem
+                      link="https://www.linkedin.com/in/rafaelvas"
+                      label="LinkedIn"
+                      icon={<LinkedinLogo className="icon" />}
+                    />
+                    <SocialMediaItem
+                      link="mailto:rafaelvas2011@hotmail.com"
+                      label="Email"
+                      icon={<MicrosoftOutlookLogo className="icon" />}
+                    />
+                    <SocialMediaItem
+                      link="https://github.com/rafael-vas"
+                      label="GitHub"
+                      icon={<GithubLogo className="icon" />}
+                    />
+                    <SocialMediaItem
+                      link="https://www.instagram.com/hafaeeu"
+                      label="Instagram"
+                      icon={<InstagramLogo className="icon" />}
+                    />
+                    <SocialMediaItem
+                      link="https://wa.me/5581987665063?text=Olá, gostaria de entrar em contato com Rafael Vasconcelos."
+                      label="WhatsApp"
+                      icon={<WhatsappLogo className="icon" />}
+                    />
                 </ul>
               </div>
-          </article>
+          </div>
+        </div>
+        <div className="article">
+        <h2 className="title"><span>About me</span></h2>
+              <p className="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, modi tempore nam expedita tempora possimus pariatur fugit magnam, esse impedit neque? Veritatis commodi a aliquam ratione ipsam dicta asperiores minus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor similique vitae esse, reiciendis eos, fugiat repellat animi quod pariatur accusamus laboriosam modi, dicta accusantium facilis consequatur. Mollitia quibusdam inventore neque.</p>
         </div>
         <ul className="roles">
-          <li className="role">
-            <CheckCircle className="icon" />
-            <p className="role-text">
-              <strong>Front-end Developer</strong>
-              <span>Websites & E-commerce</span>
-            </p>
-          </li>
-          {/* <li className="role">
-            <CheckCircle className="icon" />
-            <p className="role-text">
-              <strong>Web Designer</strong>
-              <span>Websites, Landing Pages & E-commerce</span>
-            </p>
-          </li> */}
-          <li className="role">
-            <CheckCircle className="icon" />
-            <p className="role-text">
-              <strong>UX/UI Designer</strong>
-              <span>UX Research & UI Design</span>
-            </p>
-          </li>
+          <RoleItem
+            icon={<CheckCircle className="icon" />}
+            label="Front-end Developer"
+            description="Websites & E-commerce"
+          />
+          <RoleItem
+            icon={<CheckCircle className="icon" />}
+            label="UX/UI Designer"
+            description="UX Research & UI Design"
+          />
         </ul>
-
-        <Summary>
-          <SummaryHeader>
-            <SummaryTitle
-              forSection="about"
-              titleName="experience"
-              titleContent="Experiences"
-              active
-            />
-            <SummaryTitle
-              forSection="about"
-              titleName="course"
-              titleContent="Education"
-            />
-            <SummaryTitle
-              forSection="about"
-              titleName="idiom"
-              titleContent="Idioms"
-            />
-          </SummaryHeader>
-          <SummaryContent>
-            <SummaryList
-              active
-              listName="experience"
-              listContent={lists.experiences}
-            />
-            <SummaryList
-              listName="course"
-              listContent={lists.courses}
-            />
-            <SummaryList
-              listName="idiom"
-              listContent={lists.idioms}
-            />
-          </SummaryContent>
-        </Summary>
 
       </Section>
 
@@ -198,9 +191,7 @@ export function App() {
       </Section>
 
       <Section name="contact">
-        <h1 className="title">
-          This is <span>Contact</span> Section
-        </h1>
+        <ContactForm />
       </Section>
     </div>
   );
