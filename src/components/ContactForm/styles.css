@@ -1,0 +1,100 @@
+section.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.225rem;
+    width: 100%;
+    padding: 2rem;
+    /* background: linear-gradient(
+        to right, rgba(32, 66, 146, 0.725), transparent
+    ); */
+    /* box-shadow: 0 0 2rem rgba(0, 13, 31, .25); */
+    max-width: 42.625rem;
+    border-radius: .625rem;
+
+    /* background: rgba(0, 0, 0, 0.175); */
+}
+
+section.contact form .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+}
+
+section.contact form .form-field label {
+    display: flex;
+    align-items: center;
+    gap: .675rem;
+
+    font-family: "SF Pro Display";
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    font-weight: bold;
+    font-size: .825rem;
+    text-shadow: 0 0 0.325rem rgba(255, 255, 255, 0.425);
+    opacity: .95;
+}
+
+section.contact form .form-field label .icon {
+    font-size: 1.225rem;
+    color: var(--yellow-400);
+    filter: drop-shadow(0 0 0.225rem var(--yellow-700));
+}
+
+section.contact form .form-field input,
+section.contact form .form-field textarea {
+    line-height: 1.425rem;
+    font-size: .925rem;
+    padding: 0.725rem 0.925rem;
+    letter-spacing: 0.025rem;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.175);
+    color: rgba(255, 255, 255, 0.850);
+    border-radius: .425rem;
+
+
+    background: linear-gradient(
+        to right, rgba(32, 66, 146, 0.725), transparent
+    );
+
+
+    background: rgba(0, 0, 0, 0.225);
+
+    box-shadow: 0 0 1.425rem rgba(0, 13, 31, .1);
+}
+
+section.contact form .form-field input:focus,
+section.contact form .form-field textarea:focus {
+    box-shadow: 0 0 1.425rem rgba(32, 66, 146, 0.725);
+}
+
+section.contact form button {
+    margin-top: 3.225rem;
+    font-size: .825rem;
+    padding: .625rem 1.825rem;
+    background-color: var(--yellow-700);
+    color: var(--color-secondary);
+    border: 2px solid #ffffff0e;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* box-shadow: 0 0 .8rem var(--yellow-700); */
+    transition: all .3s ease-in-out;
+}
+
+section.contact form button:hover {
+    background-color: #162f6a;
+    background-color: var(--yellow-400);
+    /* box-shadow: 0 0 .8rem #2d61bc83; */
+    box-shadow: 0 0 .8rem var(--yellow-700);
+    /* color: #fff; */
+    transform: translate(3px) scale(1.01) rotate(1deg);
+}
+
+section.contact form button .icon {
+    font-size: 1.425rem;
+    animation: spinning 1.5s linear infinite;
+}
