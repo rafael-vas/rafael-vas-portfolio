@@ -46,13 +46,11 @@ export function ContactForm() {
         errors={state.errors}
       />
 
-      <button type="submit">
+      <button type="submit" disabled={state.submitting}>
         {
             state.submitting ?
             <Spinner className="icon" weight="bold" /> : "Submit"
         }
-
-        {/* <Spinner className="icon" weight="bold" /> */}
       </button>
     </form>
 
