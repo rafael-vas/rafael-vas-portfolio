@@ -8,11 +8,11 @@ section.contact form {
     border-radius: .625rem;
 
     @media screen and (max-width: 712px) {
-        margin-top: 4.225rem;
+        margin-top: 6.225rem;
     }
 
-    @media screen and (max-width: 320px) {
-        margin-top: 8.225rem;
+    @media screen and (max-width: 420px) {
+        margin-top: 6.825rem;
     }
 }
 
@@ -83,6 +83,10 @@ section.contact form button:hover {
     box-shadow: 0 0 .8rem #2d61bc83;
     color: #fff;
     transform: translate(3px) scale(1.01) rotate(1deg);
+}
+
+section.contact form button:disabled {
+    opacity: .5;
 }
 
 section.contact form button .icon {
