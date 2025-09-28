@@ -1,6 +1,6 @@
 import "./styles.css";
 
-const cvLink = "https://drive.google.com/file/d/1LoEPMgwWAh4BoRtNWx7ZyBGqlNCBDc_q/view?usp=sharing"
+const cvLink = "#"
 
 
 import illustration from "../assets/illustration.png";
