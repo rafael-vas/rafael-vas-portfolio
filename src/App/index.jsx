@@ -2,8 +2,7 @@ import "./styles.css";
 
 const cvLink = "#"
 
-
-import illustration from "../assets/illustration.png";
+import illustration from "../assets/blue-profile.png";
 
 import { DownloadSimple, CheckCircle, LinkedinLogo, GithubLogo, WhatsappLogo, InstagramLogo, MicrosoftOutlookLogo } from "@phosphor-icons/react";
 

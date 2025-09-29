@@ -263,12 +263,13 @@ section.about .info figure:hover {
 }
 
 section.about .info figure .illustration {
-    filter: hue-rotate(-3deg);
+    /* filter: hue-rotate(-3deg); */
     position: absolute;
     width: 100%;
+    top: -6rem;
     pointer-events: none;
     object-fit: cover;
-    transform: rotate(-12.625deg) translateX(.725rem);
+    /* transform: rotate(-12.625deg) translateX(.725rem); */
 }
 
 section.about .info .info-wrapper .social-media-container {
